@@ -1,0 +1,288 @@
+.row_nav{
+    min-height: 110px;
+    margin:0px auto;
+    padding: 30px 0px 50px 0px;
+    border-bottom: 1px dotted;
+}
+
+.row_slide {
+    margin:0px auto;
+    padding: 10px 0px 10px 0px;
+    min-height:300px;
+}
+
+.row_content {
+    margin:0px auto;
+    padding: 10px 0px 10px 0px;
+    min-height:300px;
+    border-top: 1px dotted;
+    margin-top:50px;
+}
+
+.row_content h2{
+    width:300px;
+    margin-top:-30px;
+    background:white;
+    
+}
+
+
+.row_adver .btn{
+    border-radius:0px;
+    width:200px;
+    position:absolute;
+    padding-right:0px;
+    
+}
+
+.row_adver{
+    background: white;
+    margin-bottom:  20px;
+
+}
+
+
+
+/* Carousel of slide */
+#mycarousel {
+    background:#1A237E;
+}
+#mycarousel .item {
+  height: 300px;
+}
+#mycarousel .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+
+/* Carousel for new product */
+
+#mycarousel_new_product .carousel-inner .item .thumbnail{
+    display:inline-block;
+    padding-top:10%;
+    float: none;
+    border: 0 none;
+    box-shadow: none;
+}
+#mycarousel_new_product .carousel-inner .item .thumbnail .img-thumbnail{
+    width :160px;
+    height:160px;
+}
+
+#mycarousel_new_product .carousel-inner .item {
+    top : 0;
+    left : 0;
+    min-height : 300;
+}
+
+#mycarousel_new_product .item .col-md-2{
+
+    margin-left: 6%;
+}
+
+#mycarousel_new_product .active{
+
+    padding-left: 2%;
+}
+
+
+#mycarousel_new_product {
+        background: #FFFFFF ;
+        position: relative;
+        padding: 10px;     /* Shows as a border around the carousel */
+    }
+
+#mycarousel_new_product .carousel-control.right, #mycarousel_new_product .carousel-control.left {
+  background-image:none;
+    color: crimson;
+}   /* Removing Bootstrap 3 Carousel Background Gradient */
+
+
+/*    */
+
+/* Carousel for sale off */
+
+#mycarousel_sale .carousel-inner .item .thumbnail, .show_product .thumbnail{
+    display:inline-block;
+    padding-top:10%;
+    float: none;
+    border: 0 none;
+    box-shadow: none;
+    color:red;
+}
+#mycarousel_sale .carousel-inner .item .thumbnail .img-thumbnail, .show_product .thumbnail .img-thumbnail{
+    width :160px;
+    height:160px;
+}
+
+#mycarousel_sale .carousel-inner .item {
+    top : 0;
+    left : 0;
+    min-height : 300;
+}
+
+#mycarousel_sale .item .col-md-2{
+    margin-left: 6%;
+}
+
+#mycarousel_sale .active{
+    padding-left: 2%;
+}
+
+.show_product .col-md-3{
+    padding-left: 3%;
+}
+
+
+#mycarousel_sale {
+        background: #FFFFFF ;
+        position: relative;
+        padding: 10px;     /* Shows as a border around the carousel */
+    }
+
+#mycarousel_sale .carousel-control.right, #mycarousel_sale .carousel-control.left {
+  background-image:none;
+    color: crimson;
+}   /* Removing Bootstrap 3 Carousel Background Gradient */
+
+
+/* Badge*/
+#mycarousel_sale .badge{
+    background:#ea2222;
+    
+}
+
+
+
+
+
+#row_sale a {
+   margin-left:20px;
+   
+}
+
+#row_sale p {
+     width: 100px;
+     margin:-36px 0px 0px 20px;
+     float:right;
+     background:white;
+}
+
+
+/*  End carousel for sale  */
+
+
+/*  Navbar header */
+
+.shopping-cart{
+    background:red;
+    width:auto;
+    margin:1px;
+}
+
+.shopping-cart i, .shopping-cart strong{
+    color:cornsilk;
+}
+
+/* navbar top */
+.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+.navbar {min-height:32px !important}
+    
+.navbar{
+    background: #eeeeee;
+}
+/* */ 
+
+/* drop-down menu */
+
+#nav_font {
+     background: white;
+}
+
+.dropdown-menu{
+    border: 1px dotted;
+    width: 200px;
+}
+
+
+
+#nav_font .active > a,
+#nav_font .active > a:hover,
+#nav_font .active > a:focus {
+    color: #000000;
+    background: #ebf7fc;
+}
+
+#nav_font li > a:hover,
+#nav_font li > a:focus {
+     color: #000000;
+    background: #ebf7fc;
+}
+
+
+/* */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+ }
+
+/* end drop-down */
+#nav_font{
+    font-size:18px;
+    font-weight: bold;
+}
+
+
+#nav_font a
+ {
+    color: black;
+
+}
+
+.form-horizontal .control-label{
+text-align:left;
+}
+
+
+/* */
+
+
+
+
+/* Lich.html */
+
+.breadcrumb, .breadcrumb a {
+    background: #FFFFFF;
+    font-weight: bold;
+    color:black;
+}
+
+.breadcrumb >.active{
+    color:red;
+}
+
+
+
+/* */
+
+/* Footer */
+
+.row-footer{
+    background-color: #eeeeee;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.row-footer h5{
+    font-weight: bold;
+}
+
+/* End of footer */
+
+
+
+
+

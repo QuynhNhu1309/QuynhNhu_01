@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv ="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script>
+      
+      //Show/Hide auto advertisement
+/*$(function(){
+                function animate_adver()
+                {
+                            $("#label_adver").show("slow").animate({right: '+=40px'}).animate({right: '0px'}).hide("slow",animate_adver);
+                }
+    animate_adver();
+    });
+      
+  $(function() {
+    $(".video").click(function () {
+      var theModal = $(this).data("target"),
+      videoSRC = $(this).attr("data-video"),
+      videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal + ' button.close').click(function () {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+    });
+  });*/
+  </script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/mystyles_plans.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-light" role="navigation">
+        
+        <div class="container">
+            <div id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Cửa hàng</a></li>
+                        <li><a href="aboutus.html">Trợ giúp</a></li>
+                        <li><a href="aboutus.html">Call center</a></li>
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a data-toggle="modal" data-target="#loginModal"> 
+                                ĐĂNG NHẬP
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#registerModal">
+                                ĐĂNG KÝ
+                            </a>
+                        </li>
+                        
+                        <li class="shopping-cart">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <strong> 0</strong>
+                            </a>
+                        </li>
+                        
+                        
+                        <li class="shopping-cart">
+                            <a href="#">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                                <strong> 0</strong>
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+             
+                </div> 
+        </div>
+    </nav>
+  
+    <div id="loginModal" role="dialog" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" class="close">&times;</button>
+                    <h4 class="modal-title col-md-offset-1 col-md-4">ĐĂNG NHẬP</h4>
+                </div>
+                
+                    <form method="POST" action="" role="form">
+					<div class="modal-body">
+                        <p style="padding-top:5px;"></p>
+                        <div class="row">
+						<div class="form-group">
+							<label for="txttaikhoan" class="col-xs-12 col-md-offset-2 col-md-2 control-label">Tài khoản: </label>
+                            <div class="col-xs-12 col-md-5">
+							<input id="txttaikhoan" name="txttaikhoan" class="form-control input-md" type="text" placeholder="Tên đăng nhập" />
+                            </div>
+						</div>
+                        </div>
+                        <div class="row">
+						<div class="form-group">
+                            <p style="padding-top:5px;"></p>
+							<label for="txtmatkhau" class="col-xs-12 col-md-offset-2 col-md-2 control-label">Mật khẩu: </label>
+                            <div class="col-xs-12 col-md-5">
+							<input id="txtmatkhau" name="txtmatkhau" class="form-control input-md" type="password" placeholder="Mật khẩu" />
+                            </div>
+						</div>
+                            
+                        </div>
+                        <p style="padding-bottom:12px;"></p>
+					</div>
+					<div class="modal-footer">
+                    	
+						<input type="submit" class="btn btn-primary" name = "dangnhap" value = 'Đăng nhập' />
+                        
+						<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+					</div>
+					</form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="registerModal" role="dialog" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" class="close">&times;</button>
+                    <h4 class="modal-title col-md-offset-1 col-md-7">ĐĂNG KÝ THÀNH VIÊN</h4>
+                </div>
+                
+                    <form method="POST" action="" role="form" class="form-horizontal">
+					<div class="modal-body">
+                        <p style="padding-top:5px;"></p>
+                        <div class="row">
+						<div class="form-group">
+							<label for="txthotten" class="col-xs-12 col-md-offset-1 col-md-3 control-label">Họ và tên: </label>
+                            <div class="col-xs-12 col-md-6">
+							<input id="txthoten" name="txthoten" class="form-control input-md" type="text" placeholder="Họ tên" />
+                            </div>
+						</div>
+                        </div>
+                        
+                        <p style="padding-top:5px;"></p>
+                        
+                        <div class="row">
+						<div class="form-group">
+							<label for="txtemail" class="col-xs-12 col-md-offset-1 col-md-3 control-label">Email </label>
+                            <div class="col-xs-12 col-md-6">
+							<input id="txtemail" name="txtemail" class="form-control input-md" type="text" placeholder="Email" />
+                            </div>
+						</div>
+                        </div>
+                        
+                        <p style="padding-top:5px;"></p>
+                        
+                        <div class="row">
+						<div class="form-group">
+							<label for="txtsdt" class="col-xs-12 col-md-offset-1 col-md-3 control-label">Điện thoại </label>
+                            <div class="col-xs-12 col-md-6">
+							<input id="txtsdt" name="txtsdt" class="form-control input-md" type="text" placeholder="Số điện thoại" />
+                            </div>
+						</div>
+                        </div>
+                        
+                        <p style="padding-top:5px;"></p>
+                        
+                        <div class="row">
+						<div class="form-group">
+							<label for="txtmatkhau" class="col-xs-12 col-md-offset-1 col-md-3 control-label">Mật khẩu: </label>
+                            <div class="col-xs-12 col-md-6">
+							<input id="txtmatkhau" name="txtmatkhau" class="form-control input-md" type="password" placeholder="Mật khẩu" />
+                            </div>
+						</div>
+                        
+                        <p style="padding-top:5px;"></p>
+                            
+                        <div class="row">
+						<div class="form-group">
+							<label for="txtmatkhau_re" class="col-xs-12 col-md-offset-1 col-md-3 control-label">Nhập lại mật khẩu: </label>
+                            <div class="col-xs-12 col-md-6">
+							<input id="txtmatkhau_re" name="txtmatkhau_re" class="form-control input-md" type="password" placeholder="Nhập lại mật khẩu" />
+                            </div>
+						</div>
+                            
+                        </div>
+                        <p style="padding-bottom:12px;"></p>
+					</div>
+                    </div>
+					<div class="modal-footer">
+                    	
+						<input type="submit" class="btn btn-primary" name = "dangky" value = 'Đăng ký' />
+                        
+						<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+					</div>
+					</form>
+            </div>
+        </div>
+    </div>
+    
+<div class="container"> 
+        <div class="row row_nav">
+            <div class="col-xs-12 col-md-1">
+                VASCARA
+            </div>
+            
+            <div class="col-xs-12 col-md-11" id="nav_font">
+                <div id="navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">TRANG CHỦ</a></li>
+                        <li><a href="aboutus.html">
+                            LỊCH</a></li>
+
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                             role="button" aria-haspopup="true" aria-expanded="false">
+                             BÚT</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">BÚT BI</a></li>
+                                <li><a href="#">Main Courses</a></li>
+                                <li><a href="#">Desserts</a></li>
+                                <li><a href="#">Drinks</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Specials</li>
+                                <li><a href="#">Lunch Buffet</a></li>
+                                <li><a href="#">Weekend Brunch</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li><a href="contact.html">HỘP BÚT</a></li>
+                        <li><a href="contact.html">TẨY</a></li>
+                        <li><a href="contact.html">KHUYẾN MÃI</a></li>
+                        <li><a href="contact.html">TIN TỨC</a></li>
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="form-inline" role="search">
+                            
+                            <input type="text" class="form-control input-sm" placeholder="Tên sản phẩm">
+                            
+                            <button type="submit" class="btn btn-sm">TÌM KIẾM</button>
+                            </form>
+                        </li>
+                    </ul>
+             
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide -->
+        <div class="row row_slide">
+            <div class="col-xs-12 col-md-12">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class
+                          ="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        
+                        <div class="item active">
+                            <img class="img-responsive" src="img/Butbi4.jpg" alt="Uthapizza">
+                            
+                            <div class="carousel-caption">
+                                <h2>Uthappizza
+                                <span class="label label-danger label-xs">Hot</span>
+                                <span class="badge">$4.99</span>
+                                </h2>
+                            <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                            <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="item">
+                            <img class="img-responsive" src="img/Butbi4.jpg" alt="Buffet">
+                            
+                            <div class="carousel-caption">
+                                <h2>Weekend Grand Buffet
+                                <span class="label label-danger label-lg">New</span>
+                                </h2>
+                                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                                <p><a href="#" class="btn btn-primary btn-xs">More &raquo;</a></p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="item">
+                            <img class="img-responsive" src="img/Butbi4.jpg" alt="Alberto">
+                            
+                            <div class="carousel-caption">
+                                <h2>Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                                <p><a href="#" class="btn btn-primary btn-xs">More &raquo;</a></p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                     <a class="left carousel-control" href="#mycarousel" role
+                  ="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden
+                      ="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#mycarousel" role
+                  ="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden
+                      ="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+                </div>
+            </div>
+        </div>
+        
+    
+    <!-- End of slide -->
+    
+    
+     <div class="row row_content">
+         <center><h2 class="tile_content">SẢN PHẨM MỚI</h2></center>
+         <!-- Carousel with no transition-->
+        <div class="row row_slide">
+            <div class="col-xs-12 col-md-12">
+                <div id="mycarousel_new_product" class="carousel slide multi-item-carousel">
+                    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        
+                        <div class="item active">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/lich5.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía : 300.000 VNĐ
+                                    </p>
+                                    <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                                    </div> <!-- end of caption -->
+                                </div> <!-- end of thumnail -->
+                            </div>    
+                        </div> 
+                        
+                        <div class="item">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/Butbi4.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía : 300.000 VNĐ</p>
+                                    <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                                    </div> <!-- end of caption -->
+                                </div> <!-- end of thumnail -->
+                            </div>    
+                        </div> 
+                        
+                        <div class="item">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/Lich7.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía : 300.000 VNĐ</p>
+                                    <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                                    </div> <!-- end of caption -->
+                                </div> <!-- end of thumnail -->
+                            </div>    
+                        </div> 
+                        
+                        <div class="item">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/Lich14.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía : 300.000 VNĐ</p>
+                                    <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                                    </div> <!-- end of caption -->
+                                </div> <!-- end of thumnail -->
+                            </div>    
+                        </div> 
+                        
+                    </div>
+                    
+                     <a class="left carousel-control" href="#mycarousel_new_product" role
+                  ="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden
+                      ="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#mycarousel_new_product" role
+                  ="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden
+                      ="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+                </div>
+            </div>
+        </div>
+        
+    
+    <!-- End of carousel -->
+    
+    </div>
+    
+    <div class="row row_content">
+       <div id="row_sale"> 
+        <center><h2 class="tile_content">KHUYẾN MÃI</h2></center>
+        
+        <p><a href="#">Xem thêm &raquo;</a></p>
+        </div>
+      
+         <!-- Carousel with no transition-->
+        <div class="row row_slide">
+            <div class="col-xs-12 col-md-12">
+                <div id="mycarousel_sale" class="carousel slide multi-item-carousel">
+                    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        
+                        <div class="item active">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/lich5.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía gốc: <strike>300.000 VNĐ </strike></p>
+                                    <p>Gía : 270.000 VNĐ <span class="badge">-10%</span></p>
+                                    
+                                    <a class="btn btn-primary btn-xs" href="#"> Xem thêm &raquo;</a>
+                                      
+                                    </div> <!-- end of caption -->
+                                    
+                                </div> <!-- end of thumnail -->
+                                
+                            </div>    
+                        </div> 
+                        
+                        <div class="item">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/Butbi4.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía gốc: <strike>300.000 VNĐ </strike></p>
+                                    <p>Gía : 270.000 VNĐ <span class="badge">-10%</span></p>
+                                    <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                
+                                    </div> <!-- end of caption -->
+                                </div> <!-- end of thumnail -->
+                            </div>    
+                        </div> 
+                        
+                        <div class="item">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/Lich7.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía gốc: <strike>300.000 VNĐ </strike></p>
+                                    <p>Gía : 270.000 VNĐ <span class="badge">-10%</span></p>
+                                    <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                                    </div> <!-- end of caption -->
+                                </div> <!-- end of thumnail -->
+                            </div>    
+                        </div> 
+                        
+                        <div class="item">
+                            <div class="col-xs-12 col-md-2">
+                                <div class="thumbnail">
+                                    <a href="#">
+                                        <img class="media-object img-thumbnail" src="img/Lich14.jpg" alt="Alberto Somayya">
+                                    </a>
+
+                                    <div class="caption">
+                                    <h4>Lịch demo</h4>
+                                    <p>Gía gốc: <strike>300.000 VNĐ </strike></p>
+                                    <p>Gía : 270.000 VNĐ <span class="badge">-10%</span></p>
+                                    <a class="btn btn-primary btn-xs" href="#">More &raquo;</a>
+                                    </div> <!-- end of caption -->
+                                </div> <!-- end of thumnail -->
+                            </div>    
+                        </div> 
+                        
+                    </div>
+                    
+                     <a class="left carousel-control" href="#mycarousel_sale" role
+                  ="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden
+                      ="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#mycarousel_sale" role
+                  ="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden
+                      ="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+                </div>
+            </div>
+        </div>
+        
+    
+    <!-- End of carousel -->
+    
+    </div>
+
+</div> 
+    
+    <div class="row row_adver">
+        <div class="col-xs-12 col-md-2 col-md-offset-10">
+            <label id="label_adver" role="button" class="btn btn-success btn-sm video" data-video="https://www.youtube.com/embed/8L5PqL4ylIU" data-toggle="modal" data-target="#videoModal">Hiển thị quảng cáo</label>
+        </div>
+    </div>
+    
+     <!-- modal ad --> 
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            
+          <iframe width="100%" height="350" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+         
+  </div>
+  <!-- modal ad --> 
+    
+    <footer class="row-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <h5>Trợ giúp</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Giao hàng</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-xs-12 col-md-3">
+                    <h5>Bảo hành và đổi trả</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Điều khoản bảo hành</a></li>
+                        <li><a href="#">Quy định đổi trả</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-xs-12 col-md-3">
+                    <h5>Công ty</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Đối tác</a></li>
+                        <li><a href="#">Quy định đổi trả</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <h5>Liên hệ</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Cửa hàng</a></li>
+                        <li><a href="#">Hotline</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Kết nối</a>
+                        <a class="btn btn-xs btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                            
+                        <a class="btn btn-xs btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                            
+                        <a class="btn btn-xs btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                            
+                        <a class="btn btn-xs btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <p><b>Bản quyền thuộc về Vascara © 2016</b></p>
+                    <p><b>CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ VASCARA (VASCARA CO., LTD)</b></p>
+                    <p>Địa chỉ: Lầu 04, tòa nhà ACM - số 96 Cao Thắng, phường 04, quận 03, TP. HCM</p> 
+                    <p>Điện thoại: <b>1800 6909</b>, email: <b>customerservices@vascara.com</b> </p>
+                    <p>Số giấy chứng nhận đăng ký kinh doanh: 0304084107 do Sở kế hoạch và đầu tư TP. Hồ Chí Minh cấp lần đầu ngày 14/11/2005, thay đổi lần thứ 8 ngày 30/07/2015
+                    <p>Người đại diện: Ông Nguyễn Đức Mạnh</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/myjs_plans.js">
+    
+    </script>
+</body>
+
+</html>
